@@ -16,5 +16,5 @@
         return $s;
     }
 sql版：这里x是经度，Y是纬度
-
+distance 单位千米
 SELECT  FORMAT(((6370996.81)*ACOS(COS( coordy2 *PI()/180) * COS({$y}*PI()/180) * COS(( coordx2 *PI()/180)-({$x}*PI()/180)) + SIN( coordy2 *PI()/180)*SIN( {$y} *PI()/180)))/1000,2) as distance  
