@@ -1,0 +1,26 @@
+批量更新的sql语句。
+
+UPDATE newhouse_clicks  
+    SET clicks = CASE id  
+        WHEN 1 THEN 1000  
+        WHEN 2 THEN 2000  
+        WHEN 3 THEN 3000  
+    END  
+WHERE id IN (1,2,3) 
+
+
+
+ 那么更新多个字段
+ 
+ UPDATE newhouse_clicks  
+    SET clicks = CASE id  
+        WHEN 1 THEN 1000  
+        WHEN 2 THEN 2000  
+        WHEN 3 THEN 3000  
+    END,  
+    type = CASE id  
+        WHEN 1 THEN 1  
+        WHEN 2 THEN 6  
+        WHEN 3 THEN 8  
+    END  
+WHERE id IN (1,2,3)  
